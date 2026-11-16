@@ -1,0 +1,12 @@
+[theme]
+base = "dark"
+primaryColor = "#FF4B4B"
+
+[server]
+# run.bat opens the browser; headless also skips Streamlit's first-run e-mail prompt.
+headless = true
+# Only reachable from this computer. Remove this line to open it to your network.
+address = "localhost"
+
+[browser]
+gatherUsageStats = false

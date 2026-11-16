@@ -1,0 +1,13 @@
+# NVIDIA GPU build (CUDA 12.4). Needs only an up-to-date NVIDIA driver:
+# the CUDA runtime DLLs come from the nvidia-* wheels below, no CUDA Toolkit install.
+#
+#   pip install -r requirements-gpu.txt
+
+-r requirements.txt
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+# Always take the prebuilt wheel, never a source build.
+--only-binary llama-cpp-python
+
+llama-cpp-python==0.3.37
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-runtime-cu12==12.4.127

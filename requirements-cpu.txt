@@ -1,0 +1,11 @@
+# CPU-only build (no NVIDIA GPU). Slower, but works everywhere.
+#
+#   pip install -r requirements-cpu.txt
+
+-r requirements.txt
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+# Take the prebuilt wheel from the index above. Without this pip may pick a
+# newer source-only release from PyPI, which needs a C++ compiler to build.
+--only-binary llama-cpp-python
+
+llama-cpp-python>=0.3.30,<0.4

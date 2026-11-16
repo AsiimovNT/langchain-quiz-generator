@@ -1,0 +1,15 @@
+# virtual environment
+.venv/
+
+# downloaded models (GGUF, Whisper) - several GB, fetched by setup.bat
+models/
+
+# downloaded audio and cached transcripts
+data/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# local tooling
+.prompt-history/
